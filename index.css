@@ -47,3 +47,7 @@ li.medium {
   bottom: 15%;
   width: 40%;
 }
+
+.slide::after {
+  content: unset;
+}
