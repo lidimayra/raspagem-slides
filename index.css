@@ -48,6 +48,25 @@ li.medium {
   width: 40%;
 }
 
+.screenshot.ref {
+  width: 22%;
+}
+
+.book.ref {
+  width: 15%;
+  margin-right: 60px;
+}
+
+.book.ref.smaller {
+  width: 15.5%;
+  border: solid gray 1px;
+  margin-right: 0px;
+}
+
+a.ref {
+  color: white;
+}
+
 .slide::after {
   content: unset;
 }
