@@ -67,6 +67,17 @@ a.ref {
   color: white;
 }
 
+#questions {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  right: 5%;
+}
+
+#questions > li {
+  padding-bottom: 24px;
+}
+
 .slide::after {
   content: unset;
 }
