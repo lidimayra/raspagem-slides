@@ -78,6 +78,10 @@ a.ref {
   padding-bottom: 24px;
 }
 
+#companies-graph {
+  width: 65%;
+}
+
 .slide::after {
   content: unset;
 }
