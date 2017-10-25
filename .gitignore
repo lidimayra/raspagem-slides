@@ -1,3 +1,6 @@
 node_modules
 prepared
 archive.zip
+*.log
+.python-version
+
