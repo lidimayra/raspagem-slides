@@ -1,12 +1,19 @@
 #! /usr/bin/env python3
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from selenium import webdriver
+
+driver = webdriver.PhantomJS()
+
 url = 'http://seti.ufla.br/'
-html = urlopen(url)
-soup = BeautifulSoup(html.read(), 'html.parser')
+driver.get(url)
 
-boxes = soup.findAll('div', { 'class': 'box-nome-palestrante' })
+soup = BeautifulSoup(driver.page_source, 'html.parser')
 
-for box in boxes:
-    name = box.find('p', { 'class': 'nome-palestrante' })
-    print(name.text)
+divs = soup.findAll('div', { 'ng-repeat': 'palestrante in palestrantes' })
+
+for div in divs:
+    name = div.find('p').text
+    company = div.find('h4').text
+
+    print(name, '-', company)
