@@ -82,6 +82,12 @@ a.ref {
   width: 65%;
 }
 
+#beautifulsoup {
+  width: 40%;
+  margin: auto;
+  display: block;
+}
+
 .slide::after {
   content: unset;
 }
