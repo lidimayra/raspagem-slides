@@ -88,6 +88,17 @@ a.ref {
   display: block;
 }
 
+#thanks {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  text-align: center;
+}
+
+#thanks > h2 {
+  font-size: 90px;
+}
+
 .slide::after {
   content: unset;
 }
