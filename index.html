@@ -24,7 +24,8 @@
       <img src="pictures/lidi.jpg" width="20%" style="border:1px solid black">
       <ul>
         <li>Tecnóloga em Análise e Desenvolvimento de Sistemas pela <a href="http://www.fatecjd.edu.br/portal/">FATEC Jundiaí</a></li>
-        <li>Back-end developer na <a href="https://www.lovemondays.com.br/">Love Mondays</a></li>
+        <li>Back-end developer na <a href="https://www.lovemondays.com.br/">Love
+            Mondays</a> <> <a href="https://www.glassdoor.com">Glassdoor</a></li>
       </ul>
     </section>
 
@@ -100,20 +101,21 @@
 
     <section class="slide" id="picture">
       <figure>
-        <img class="cover" src="pictures/seti.png">
+        <img class="cover" src="pictures/fatecbp.png">
       </figure>
     </section>
 
     <section class="slide">
-      <h2>seti.py</h2>
+      <h2>fatec_bp01.py</h2>
       <pre>
       <code>from urllib.request import urlopen</code>
       <code>from bs4 import BeautifulSoup</code>
-      <code>url = 'http://seti.ufla.br/'</code>
+      <code>url = 'http://www.fatecbpaulista.edu.br/eventos/'</code>
       <code>html = urlopen(url)</code>
       <code>soup = BeautifulSoup(html.read(), 'html.parser')</code>
-      <code>paragraph = soup.p</code>
-      <code>print(paragraph.text)</code>
+      <code>lista_divs = soup.findAll('div', {'class': 'content__event'})</code>
+      <code>for div in lista_divs:</code>
+      <code>    print(div.text.strip())</code>
       </pre>
     </section>
 
